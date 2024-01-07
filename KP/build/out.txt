@@ -1,0 +1,183 @@
+Memory allocators:
+- Free blocks allocator (most fit policy)
+- McKusick-Karels allocator
+
+
+Free blocks allocator (most fit policy):
+
+Free blocks allocator info:
+Size of memory page: 1024
+Pointer of memory page: 0x15570c0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15570c0|    1024     |
+
+p1 = 0x155745c
+
+Free blocks allocator info:
+Size of memory page: 1024
+Pointer of memory page: 0x15570c0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15570c0|    924     |
+
+p2 = 0x15573f8
+
+Free blocks allocator info:
+Size of memory page: 1024
+Pointer of memory page: 0x15570c0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15570c0|    824     |
+
+p3 = 0x1557394
+
+Free blocks allocator info:
+Size of memory page: 1024
+Pointer of memory page: 0x15570c0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15570c0|    724     |
+
+p2 freed
+
+Free blocks allocator info:
+Size of memory page: 1024
+Pointer of memory page: 0x15570c0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15570c0|    724     |
+|1 | 0x15573f8|    100     |
+
+p1 freed
+
+Free blocks allocator info:
+Size of memory page: 1024
+Pointer of memory page: 0x15570c0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15570c0|    724     |
+|1 | 0x15573f8|    100     |
+|2 | 0x155745c|    100     |
+
+p3 freed
+
+Free blocks allocator info:
+Size of memory page: 1024
+Pointer of memory page: 0x15570c0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15570c0|    724     |
+|1 | 0x1557394|    100     |
+|2 | 0x15573f8|    100     |
+|3 | 0x155745c|    100     |
+
+defragmented
+
+Free blocks allocator info:
+Size of memory page: 1024
+Pointer of memory page: 0x15570c0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15570c0|    1024     |
+
+The time: 17872 ms
+- McKusick-Karels allocator
+
+MKK allocator info:
+Availible size of memory page: 1024
+Pointer of memory page: 0x15574d0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15574d0|    1024     |
+
+p4 = 0x15574d0
+
+MKK allocator info:
+Availible size of memory page: 768
+Pointer of memory page: 0x15574d0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15574d0|    256     |
+|1 | 0x15575d0|    256     |
+|2 | 0x15576d0|    256     |
+
+p5 = 0x15574d0
+
+MKK allocator info:
+Availible size of memory page: 512
+Pointer of memory page: 0x15574d0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15574d0|    256     |
+|1 | 0x15575d0|    256     |
+
+p6 = 0x15574d0
+
+MKK allocator info:
+Availible size of memory page: 256
+Pointer of memory page: 0x15574d0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15574d0|    256     |
+
+p7 = 0x15574d0
+
+MKK allocator info:
+Availible size of memory page: 0
+Pointer of memory page: 0x15574d0
+Availible_blocks:
+|№ | block pointer | block size |
+
+p4 freed
+
+MKK allocator info:
+Availible size of memory page: 256
+Pointer of memory page: 0x15574d0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15574d0|    256     |
+
+p7 freed
+
+MKK allocator info:
+Availible size of memory page: 512
+Pointer of memory page: 0x15574d0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15574d0|    256     |
+|1 | 0x15575d0|    256     |
+
+p5 freed
+
+MKK allocator info:
+Availible size of memory page: 768
+Pointer of memory page: 0x15574d0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15574d0|    256     |
+|1 | 0x15575d0|    256     |
+|2 | 0x15576d0|    256     |
+
+p6 freed
+
+MKK allocator info:
+Availible size of memory page: 1024
+Pointer of memory page: 0x15574d0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15574d0|    256     |
+|1 | 0x15575d0|    256     |
+|2 | 0x15576d0|    256     |
+|3 | 0x15577d0|    256     |
+
+defragmented
+
+MKK allocator info:
+Availible size of memory page: 1024
+Pointer of memory page: 0x15574d0
+Availible_blocks:
+|№ | block pointer | block size |
+|0 | 0x15574d0|    1024     |
+
+The time: 18330 ms

@@ -1,0 +1,3 @@
+/com.docker.devenvironments.code/KP/build/CMakeFiles/rebuild_cache.dir
+/com.docker.devenvironments.code/KP/build/CMakeFiles/edit_cache.dir
+/com.docker.devenvironments.code/KP/build/CMakeFiles/kpout.dir
